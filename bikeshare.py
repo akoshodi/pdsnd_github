@@ -199,7 +199,7 @@ def raw_data(df):
         elif show_raw_data in ("yes", "y"):
             print('\nGetting raw data...\n')
             print(df.iloc[0:5,:])
-            show_next_five = input("\nWould you like to see the next 5 rows?")
+            show_next_five = input("\nWould you like to see the next 5 rows? ")
             if show_next_five in ("yes", "y"):
                 start += 5
                 if (start + 5 >= len(df.index)):
