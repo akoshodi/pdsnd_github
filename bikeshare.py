@@ -20,7 +20,7 @@ def get_filters():
     while True:
         city = str(input("\nEnter a city (chicago,new york city or washington): ").strip().lower())
         if city not in CITY_DATA.keys():
-            print("\nInvalid response. Pick a city from the given options")
+            print("\nInvalid response. Pick a valid city from the given options")
             continue
         else:
             print("\nSelected data file for {}".format(city))
@@ -188,7 +188,7 @@ def user_stats(df):
 
 def raw_data(df):
     """Displays raw data 5 rows at a time."""
-    
+
     start_time = time.time()
     start = 0
     while True:
@@ -196,8 +196,8 @@ def raw_data(df):
         if show_raw_data not in ("yes", "no", 'y', 'n'):
             print("Invalid response. Please type in 'yes' or 'no'")
             continue
-        elif show_raw_data in ("yes", "y"):    
-            print('\nGetting raw data...\n')        
+        elif show_raw_data in ("yes", "y"):
+            print('\nGetting raw data...\n')
             print(df.iloc[0:5,:])
             show_next_five = input("\nWould you like to see the next 5 rows?")
             if show_next_five in ("yes", "y"):
@@ -207,9 +207,9 @@ def raw_data(df):
                     print("You've reached the end of the data")
                     break
                 print(df.iloc[start: start+5, :])
-            else: 
+            else:
                 break
-        else:  
+        else:
             print("You have chosen not to see the individual data")
             break
         print("\nThis took %s seconds." % (time.time() - start_time))
