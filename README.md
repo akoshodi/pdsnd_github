@@ -1,6 +1,3 @@
-### Date created
-December 10, 2019.
-
 ## Bike Share Data Analysis
 
 ### Description
@@ -10,7 +7,7 @@ Computes the descriptive statistics of bike share systems in 3 cities.
 The 3 city datasets used are
 - chicago.csv
 - new_york_city.csv
-- washington.csv
+- washington.csv\
 The datasets were provided by [Motivate](https://www.motivateco.com/), a bike share system provider for many major cities in the United States.
 
 ### Usage
